@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<component name="LinkedScreen" extends="BaseScreen">
+
+    <children>
+
+        <AvenirBlackLabel
+            id="title"
+            size="50" />
+
+        <PosterGrid 
+            id="grid"
+            vertFocusAnimationStyle="floatingFocus"
+            numRows="1"
+            numColumns="2"
+            basePosterSize="[300, 250]"
+            itemSize="[300, 250]"
+            itemSpacing="[40, 40]"
+            caption1NumLines="1" />
+
+        <Notification
+            id="notification" />
+    </children>
+
+    <script type="text/brightscript" uri="linked.brs" />
+</component>

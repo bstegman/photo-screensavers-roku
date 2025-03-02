@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<component name="Countdown" extends="Label">
+
+    <interface>
+        <field id="count" type="integer" />
+        <field id="current" type="integer" />
+        <field id="control" type="string" onChange="onControl" alwaysNotify="true" />
+    </interface>
+
+    <children>
+
+        <Timer
+            id="timer"
+            duration="1"
+            repeat="true" />
+    </children>
+
+    <script type="text/brightscript" uri="countdown.brs" />
+</component>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ListItemNode" extends="ContentNode">
+
+ 	<interface>
+		<field id="subtitle" type="string" />
+	 	<field id="checked" type="boolean" value="false" />
+	</interface>
+</component>

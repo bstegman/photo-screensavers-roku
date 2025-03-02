@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="LabelBase" extends="Label">
+
+    <interface>
+
+        <!--
+            This field handles special character input.  It allows you to enter
+            the special characters on the xml attribute vs the code behind.
+            supported values: \n = chr(10)
+        -->
+        <field id="textSpecial" type="string" onChange="onTextSpecial" />
+    </interface>
+
+    <script type="text/brightscript" uri="labelBase.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/locale.brs" />
+</component>

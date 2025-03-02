@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="AnimationFalling" extends="Group">
+
+    <interface>
+        <field id="control" type="string" onChange="onControl" />
+        <field id="imageSize" type="string" value="100x100" />
+        <field id="images" type="array" />
+        <field id="numItems" type="integer" value="10" />
+
+        <function name="reset" />
+    </interface>
+
+	<children>
+
+        <Group id="posterContainer" />
+        <Group id="animationContainer" />
+
+        <Timer
+            id="timer"
+            duration="5"
+            repeat="true" />
+    </children>
+
+    <script type="text/brightscript" uri="animationFalling.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/math.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/ui.brs" />
+</component>

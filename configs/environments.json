@@ -1,0 +1,39 @@
+{
+    "current": "prod",
+    "prod": {
+        "name": "prod",
+        "api":{
+            "url": "https://api.myfreeapps.com",
+            "token": "e2538fb8-608c-46a4-8a67-21814009b889",
+            "tokenServer":"6feb3adc-7d08-4b0b-81ef-0b887ae3df89",
+            "log":false,
+            "validate":true
+        },
+        "newRelic":{
+            "enabled":true,
+            "accountID":"2823845",
+            "apiKey":"NRII-zRRMsoBQfC8ZfCbCVNKbaAfuTKm5_Id8"
+        },
+        "website":{
+            "host":"https://www.bytewiseapps.com"
+        }
+    },
+    "dev": {
+        "name": "dev",
+        "api":{
+            "url": "https://minnow-lucky-marmot.ngrok-free.app",
+            "token": "e2538fb8-608c-46a4-8a67-21814009b889",
+            "tokenServer":"6feb3adc-7d08-4b0b-81ef-0b887ae3df89",
+            "log":false,
+            "validate":false
+        },
+        "newRelic":{
+            "enabled":false,
+            "accountID":"2823845",
+            "apiKey":"NRII-zRRMsoBQfC8ZfCbCVNKbaAfuTKm5_Id8"
+        },
+        "website":{
+            "host":"http://192.168.68.102:4000"
+        }
+    }
+}

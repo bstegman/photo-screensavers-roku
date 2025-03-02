@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="FeedbackScreen" extends="BaseScreen">
+
+    <children>
+
+        <Label
+            id="feedbackTitle"
+            font="font:LargeBoldSystemFont" />
+
+        <DynamicKeyboard
+            id="keyboard" />
+
+        <ButtonsStandard
+            id="buttons"
+            itemSize="[1360, 75]"
+            rowHeights="[75]"
+            itemSpacing="[20, 60]" />
+
+        <Label
+            id="feedbackMessage"
+            font="font:MediumSystemFont" />
+
+        <Label
+            id="versionNumber"
+            font="font:MediumSystemFont" />
+
+        <Notification
+            id="notification"
+            visible="false" />
+    </children>
+
+    <script type="text/brightscript" uri="feedback.brs" />
+    <script type="text/brightscript" uri="pkg:/source/api/feedback.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/device.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/KeyManager.brs" />
+</component>

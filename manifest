@@ -1,0 +1,15 @@
+title=Women Swimsuits
+major_version=11
+minor_version=5
+build_version=0
+ui_resolutions=fhd
+mm_icon_focus_hd=pkg:/assets/images/icons/product-icon.jpg
+splash_screen_hd=pkg:/assets/images/splash.jpg
+supports_input_launch=1
+bs_libs_required=roku_ads_lib
+rsg_version=1.2
+collection=2682
+feed=
+music=relaxing
+product=women-swimsuits
+type=

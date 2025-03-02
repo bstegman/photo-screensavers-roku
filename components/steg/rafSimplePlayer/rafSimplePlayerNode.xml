@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<component name="RAFSimplePlayerNode" extends="ContentNode">
+	<interface>
+		<!--
+			ad url
+		-->
+		<field id="url" type="string" />
+
+		<!--
+			ad title
+		-->
+		<field id="title" type="string" />
+
+		<!--
+			ad description
+		-->
+		<field id="description" type="string" />
+
+		<!--
+			content length
+		-->
+		<field id="contentLength" type="integer" value="0" />
+
+		<!--
+			contentId
+		-->
+		<field id="contentId" type="string" value="GV" />
+
+		<!--
+			nielsen id (this is Roku's default)
+		-->
+		<field id="nielsenId" type="string" value="P2871BBFF-1A28-44AA-AF68-C7DE4B148C32" />
+
+		<!--
+			genre
+		-->
+		<field id="genre" type="string" />
+
+		<!--
+			the view to attach the ad too
+		-->
+		<field id="view" type="node" />
+	</interface>
+</component>

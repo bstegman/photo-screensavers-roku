@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="WidgetsAddOnsScreen" extends="BaseScreen">
+
+    <children>
+
+        <ButtonsStandard
+            id="buttons"
+            orientation="vertical"
+            rowSpacings="[75, 10]"
+            rowHeights="[75]" />
+    </children>
+
+    <script type="text/brightscript" uri="addons.brs" />
+</component>

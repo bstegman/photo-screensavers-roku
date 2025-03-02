@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="FreeScreensaverScreen" extends="BaseScreen">
+
+    <children>
+
+        <Rectangle
+            id="background"
+            color="#000000" />
+
+        <ViewPhoto
+            id="viewPhoto"
+            photoScale="tv"
+            transition="fade" />
+
+       <AddOns
+            id="addons" />
+
+        <Timer
+            id="photoTimer"
+            duration="30"
+            repeat="false" />
+    </children>
+
+    <script type="text/brightscript" uri="screensaver.brs" />
+    <script type="text/brightscript" uri="pkg:/source/reg/clock.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/math.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/registry.brs" />
+</component>

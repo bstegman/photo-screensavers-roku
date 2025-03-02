@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="UserManager" extends="Group" >
+
+    <interface>
+        <!--
+            Defaults to the Screensaver Collection user but is updated with the 
+            users token after the device is linked to their account.
+        -->
+        <field id="token" type="string" />
+
+        <!--
+            the user if they have their account linked
+        -->
+        <field id="user" type="assocarray" />
+
+        <!--
+            the roku user
+        -->
+        <field id="userRoku" type="node" alwaysNotify="true" />
+
+        <!--
+            the purchase object found
+        -->
+        <field id="purchase" type="node" alwaysNotify="true" />
+
+
+
+        <!--
+            get channel stores
+        -->
+        <function name="getChannelStore" />
+
+        <!--
+            calls the channel store and gets the user purchase
+        -->
+        <function name="load" />
+
+        <!--
+            get the roku store information
+        -->
+        <function name="loadRokuUser" />
+
+        <!--
+            Logs the user out
+        -->
+        <function name="logout" />
+
+        <!--
+            starts a store purchase
+        -->
+        <function name="makePurchase" />
+    </interface>
+
+    <script type="text/brightscript" uri="userManager.brs" />
+    <script type="text/brightscript" uri="pkg:/source/api/user.brs" />
+    <script type="text/brightscript" uri="pkg:/source/reg/user.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/api/newRelic.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/api/utils.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/log.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/registry.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/type.brs" />
+    <script type="text/brightscript" uri="pkg:/source/utils/api.brs" />
+</component>

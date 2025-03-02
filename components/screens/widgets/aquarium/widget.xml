@@ -1,0 +1,10 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<component name="WidgetAquariumScreen" extends="WidgetBaseScreen">
+
+    <children>
+
+        <AquariumComponent id="tank" />
+    </children>
+
+    <script type="text/brightscript" uri="widget.brs" />
+</component>

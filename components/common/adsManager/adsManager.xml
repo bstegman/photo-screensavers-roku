@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="AdsManager" extends="Group">
+
+    <interface>
+        <!--
+            this is set any time an ads completed.
+                true = successful
+                false = failed
+        -->
+        <field id="completed" type="boolean" alwaysNotify="true" />
+
+        <!--
+            where the ad was started from (for example the component)
+        -->
+        <field id="context" type="string" />
+
+        <!--
+            settings required to run the ads
+        -->
+        <field id="settings" type="assocarray" />
+
+        <!--
+            this is set any time an ad is about to get run 
+            so the implmenting component can pause any resources
+        -->
+        <field id="starting" type="boolean" alwaysNotify="true" />
+
+        <!--
+            how often ads will show after the initial ad
+        -->
+        <field id="timerInterval" type="integer" alias="adTimer.duration" />
+
+        <!--
+            plays an ad
+        -->
+        <function name="playAd" />
+
+        <!--
+            starts the ad timer which then plays ads on a regular basis
+        -->
+        <function name="startTimer" />
+
+        <!--
+            stops the ad manager
+        -->
+        <function name="stopManager" />
+    </interface>
+
+    <children>
+
+        <RAFSimplePlayer 
+            id="rafPlayer" />
+
+        <Timer
+            id="adTimer"
+            duration="120"
+            repeat="false" />
+    </children>
+
+    <script type="text/brightscript" uri="adsManager.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/api/newRelic.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/api/utils.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/log.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/raf.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/type.brs" />
+</component>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ButtonStandardNode" extends="ContentNode">
+
+  <interface>
+    <!--
+        path to icon
+    -->
+    <field id="icon" type="string" />
+
+    <!--
+        where to place the icon
+        supported values are: left or right
+    -->
+    <field id="iconPos" type="string" value="right" />
+  </interface>
+</component>

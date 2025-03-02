@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ButtonGridItem" extends="Group" >
+
+	<interface>
+		<field id="itemContent" type="node" onChange="onItemContent" />
+	 	<field id="focusPercent" type="float" onChange="onFocus" />
+		<field id="gridHasFocus" type="boolean" onChange="onFocus" />
+		<field id="width" type="float" onChange="onWidth" />
+		<field id="height" type="float" onChange="onHeight" />
+	</interface>
+
+	<children>
+
+		<Rectangle
+			id="bak" />
+
+		<Label
+			id="title"
+			horizAlign="center"
+			vertAlign="center"
+			font="font:SmallSystemFont" />
+	</children>
+
+	<script type="text/brightscript" uri="buttonGridItem.brs" />
+</component>

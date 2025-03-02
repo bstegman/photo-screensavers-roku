@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="AvenirBlackLabel" extends="LabelBase">
+
+    <interface>
+        <field id="size" type="integer" onChange="onSizeChange" />
+    </interface>
+
+    <script type="text/brightscript" uri="avenirBlackLabel.brs" />
+</component>

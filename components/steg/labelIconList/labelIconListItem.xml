@@ -1,0 +1,22 @@
+<component name="LabelIconListItem" extends="Group">
+
+    <interface>
+        <field id="itemContent" type="node" onChange="onContentChanged" />
+        <field id="focusPercent" type="float" onChange="showFocus" />
+        <field id="listHasFocus" type="boolean" onChange="onFocusChange" />
+    </interface>
+
+    <children>
+
+	    <Label id="itemIcon" />
+
+		<Label
+			id="itemLabel"
+			translation="[30, 0]"
+			font="font:SmallBoldSystemFont" />
+
+    </children>
+
+    <script type="text/brightscript" uri="labelIconListItem.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/locale.brs" />
+</component>

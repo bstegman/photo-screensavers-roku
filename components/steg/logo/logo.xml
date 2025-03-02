@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="Logo" extends="Label" >
+
+	<script type="text/brightscript" uri="logo.brs" />
+</component>

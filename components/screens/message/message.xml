@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MessageScreen" extends="BaseScreen">
+
+    <children>
+
+        <Label
+            id="message1"
+            font="font:MediumSystemFont"
+            horizAlign="center"
+            vertAlign="center"
+            wrap="true" />
+
+        <Label
+            id="message2"
+            font="font:MediumSystemFont"
+            horizAlign="center"
+            vertAlign="center"
+            wrap="true" />
+
+        <Label
+            id="message3"
+            font="font:MediumSystemFont"
+            horizAlign="center"
+            vertAlign="center"
+            wrap="true" />
+    </children>
+
+    <script type="text/brightscript" uri="message.brs" />
+    <script type="text/brightscript" uri="pkg:/source/reg/message.brs" />
+</component>

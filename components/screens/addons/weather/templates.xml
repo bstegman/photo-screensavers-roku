@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="AddOnsWeatherTemplatesScreen" extends="BaseScreen">
+
+	<children>
+
+        <ButtonsStandard
+            id="buttons"
+            orientation="vertical"
+            rowHeights="[50]" />
+    </children>
+
+    <script type="text/brightscript" uri="templates.brs" />
+    <script type="text/brightscript" uri="pkg:/source/reg/weather.brs" />
+    <script type="text/brightscript" uri="pkg:/source/utils/weather.brs" />
+</component>

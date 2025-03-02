@@ -1,0 +1,28 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<component name="WidgetFallingLeavesScreen" extends="WidgetBaseScreen">
+
+    <children>
+
+        <ViewPhoto
+            id="viewPhoto"
+            photoScale="tv"
+            transition="fade" />
+
+        <ParallelAnimation
+            id="pAnimation"
+            repeat="false" />
+
+        <Timer
+            id="animTimer"
+            duration="2"
+            repeat="false" />
+
+        <Timer
+            id="timerChangeScene"
+            duration="900"
+            repeat="true" />
+    </children>
+
+    <script type="text/brightscript" uri="widget.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/math.brs" />
+</component>

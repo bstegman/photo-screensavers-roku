@@ -1,0 +1,81 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<component name="AquariumComponent" extends="Group">
+
+    <interface>
+        <function name="createFishTank" />
+        <function name="pause" />
+    </interface>
+
+    <children>
+
+        <Poster
+            id="background"
+            uri="pkg:/assets/widgets/aquarium/background.jpg" />
+
+        <Group id="fishContainer" />
+
+        <ParallelAnimation 
+            id="pAnimation"
+            repeat="false">
+            
+            <Animation
+                id="animation1"
+                duration="60"
+                repeat="false"
+                easeFunction="linear">
+                <Vector2DFieldInterpolator
+                    id="inter1"
+                    key="[0.0, 1.0]" />
+            </Animation>
+            <Animation
+                id="animation2"
+                duration="60"
+                repeat="false"
+                easeFunction="linear">
+                <Vector2DFieldInterpolator
+                    id="inter2"
+                    key="[0.0, 1.0]" />
+            </Animation>
+            <Animation
+                id="animation3"
+                duration="60"
+                repeat="false"
+                easeFunction="linear">
+                <Vector2DFieldInterpolator
+                    id="inter3"
+                    key="[0.0, 1.0]" />
+            </Animation>
+            <Animation
+                id="animation4"
+                duration="60"
+                repeat="false"
+                easeFunction="linear">
+                <Vector2DFieldInterpolator
+                    id="inter4"
+                    key="[0.0, 1.0]" />
+            </Animation>
+            <Animation
+                id="animation5"
+                duration="60"
+                repeat="false"
+                easeFunction="linear">
+                <Vector2DFieldInterpolator
+                    id="inter5"
+                    key="[0.0, 1.0]" />
+            </Animation>
+            <Animation
+                id="animation6"
+                duration="60"
+                repeat="false"
+                easeFunction="linear">
+                <Vector2DFieldInterpolator
+                    id="inter6"
+                    key="[0.0, 1.0]" />
+            </Animation>
+        </ParallelAnimation>
+    </children>
+
+    <script type="text/brightscript" uri="component.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/math.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/ui.brs" />
+</component>

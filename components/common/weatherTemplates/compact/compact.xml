@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="WeatherCompact" extends="Group">
+
+    <interface>
+        <function name="set" />
+    </interface>
+
+    <children>
+
+        <!-- current -->
+        <Poster
+            id="tempIcon"
+            width="75"
+            height="75"
+            translation="[60, 55]" />
+
+        <Label
+            id="temp"
+            font="font:SmallSystemFont"
+            translation="[165, 60]" />
+
+        <Label
+            id="tempToday"
+            font="font:SmallSystemFont"
+            translation="[165, 110]" />
+
+        <!-- forecast -->
+        <LayoutGroup 
+            id="containerForecast"
+            layoutDirection="horiz"
+            itemSpacings="[200]" />
+    </children>
+
+    <script type="text/brightscript" uri="compact.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/dateTime.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/locale.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/type.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/ui.brs" />
+</component>

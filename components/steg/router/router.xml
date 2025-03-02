@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="Router" extends="Group" >
+
+    <interface>
+		<!--
+			Users can listen to this field to get alerted when the router switches from one screen to the next
+			{
+				from:{screenID string}
+				to:{screenID string}
+			}
+		-->
+		<field id="screenChange" type="assocarray" alwaysNotify="true" />
+
+		<!--
+			How many screens to keep in the history stack
+		-->
+		<field id="trackHistoryCount" type="integer" value="15" />
+
+        <!--
+            when enabled prints router logs to the console
+        -->
+        <field id="loggingEnabled" type="boolean" value="false" />
+
+		<!--
+			Method for moving back on in the screen history
+		-->
+	    <function name="historyBack" />
+
+		<!--
+			Method for showing a screen
+		-->
+	    <function name="showScreen" />
+
+		<!--
+			Method used to set the available screens and their configuration data
+		-->
+	    <function name="setScreens" />
+
+		<!--
+			Method for getting a specific screen
+		-->
+	    <function name="getScreen" />
+
+		<!--
+			Method for getting the active screen
+        -->
+	    <function name="getActiveScreen" />
+
+        <!--
+            Get history
+        -->
+        <function name="getHistory" />
+
+        <!--
+            remove n number of items from the top of the history stack
+        -->
+        <function name="popHistory" />
+
+        <!--
+            removes all history items
+        -->
+        <function name="clearHistory" />
+
+        <!--
+            removes the screen object that has been rendered
+        -->
+        <function name="removeScreen" />
+
+		<!--
+			removes all the screens.  If includeCurrent is true then the current screen will be removed also
+		-->
+        <function name="removeAllScreens" />
+
+		<!--
+			allows a screen to set its last known state
+		-->
+		<function name="setScreenState" />
+    </interface>
+
+	<children>
+		<!--
+			Container used to manage the screens
+		-->
+		<Rectangle id="routerOut" />
+	</children>
+
+    <script type="text/brightscript" uri="router.brs" />
+	<script type="text/brightscript" uri="pkg:/source/steg/type.brs" />
+</component>

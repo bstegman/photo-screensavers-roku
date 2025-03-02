@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="AddOnsAnimationsScreen" extends="BaseScreen">
+
+    <children>
+
+        <AvenirBlackLabel
+            id="title"
+            size="50" />
+
+        <CheckList
+            id="animations"
+            vertFocusAnimationStyle="floatingFocus"
+            visible="false">
+            <ContentNode role="content">
+                <ContentNode id="none" />
+            </ContentNode>
+        </CheckList>
+    </children>
+
+    <script type="text/brightscript" uri="animations.brs" />
+</component>

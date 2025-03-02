@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="PowerTVFreeScreen" extends="BaseScreen">
+
+    <children>
+
+        <PosterGrid 
+            id="menu"
+            vertFocusAnimationStyle="fixedFocus"
+            numRows="3"
+            numColumns="3"
+            basePosterSize="[400, 227]"
+            itemSize="[400, 227]"
+            itemSpacing="[40, 40]"
+            caption1NumLines="1"
+            translation="[350, 100]" />
+
+        <Rectangle
+            id="messageContainer"
+            color="#000000"
+            visible="false">
+
+            <Label
+                id="messageLabel"
+                horizAlign="center"
+                vertAlign="center"
+                color="#FFFFFF"
+                wrap="true"
+                font="font:SmallestSystemFont" />
+        </Rectangle>
+    </children>
+
+    <script type="text/brightscript" uri="powerTV.brs" />
+</component>

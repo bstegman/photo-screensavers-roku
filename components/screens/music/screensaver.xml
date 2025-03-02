@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MusicScreensaverScreen" extends="BaseScreen">
+
+    <children>
+
+        <Rectangle
+            id="background"
+            color="#000000" />
+
+        <ViewPhoto
+            id="viewPhoto"
+            photoScale="tv"
+            transition="fade" />
+
+        <AddOns
+            id="addons" />
+
+        <Timer
+            id="photoTimer"
+            duration="30"
+            repeat="false" />
+    </children>
+
+    <script type="text/brightscript" uri="screensaver.brs" />
+    <script type="text/brightscript" uri="pkg:/source/api/collections.brs" />
+    <script type="text/brightscript" uri="pkg:/source/api/music.brs" />
+    <script type="text/brightscript" uri="pkg:/source/api/weather.brs" />
+    <script type="text/brightscript" uri="pkg:/source/reg/clock.brs" />
+    <script type="text/brightscript" uri="pkg:/source/reg/user.brs" />
+    <script type="text/brightscript" uri="pkg:/source/reg/weather.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/dateTime.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/device.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/math.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/registry.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/track.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/type.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/ui.brs" />
+    <script type="text/brightscript" uri="pkg:/source/utils/api.brs" />
+    <script type="text/brightscript" uri="pkg:/source/utils/weather.brs" />
+</component>

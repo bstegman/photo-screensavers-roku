@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ModalMessaging" extends="Rectangle">
+
+	<interface>
+		<!--
+			Set with the name of the button when a button has been selected
+			button names: ok or cancel
+		-->
+		<field id="btnSelected" type="string" alwaysNotify="true" />
+
+		<!--
+			Determines if the cancel button should be shown
+		-->
+		<field id="btnCancelShow" type="boolean" value="true" />
+
+		<!--
+			Cancel button text
+		-->
+		<field id="btnCancelText" type="string" value="Cancel" />
+
+		<!--
+			Ok button text
+		-->
+		<field id="btnOkText" type="string" alwaysNotify="true" value="Ok" />
+
+		<!--
+			data
+		-->
+		<field id="data" type="assocarray" />
+
+		<!--
+			Adds the modal to the ui
+		-->
+		<function name="show" />
+
+		<!--
+			Removes the modal from the UI
+		-->
+		<function name="close" />
+	</interface>
+
+	<children>
+
+		<Rectangle id="containerInner">
+
+			<Label
+				id="message"
+				translation="[0, 10]"
+				horizAlign="center"
+				vertAlign="top"
+				wrap="true" 
+				font="font:SmallestBoldSystemFont" />
+
+			<MarkupGrid 
+				id="buttons"
+				numColumns="2"
+				numRows="1"
+            	itemSize="[100, 40]"
+            	rowHeights="[40]"
+            	columnWidths="[100]"
+				itemComponentName="ModalMessagingButtonComponent"
+        		horizFocusAnimationStyle="floatingFocus"
+        		vertFocusAnimationStyle="floatingFocus"
+        		drawFocusFeedback="false"
+        		wrapDividerBitmapUri="" />
+		</Rectangle>
+	</children>
+
+	<script type="text/brightscript" uri="modalMessaging.brs" />
+	<script type="text/brightscript" uri="pkg:/source/steg/ui.brs" />
+	<script type="text/brightscript" uri="pkg:/source/steg/type.brs" />
+</component>

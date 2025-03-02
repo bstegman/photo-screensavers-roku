@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="AddOnsWeatherScreen" extends="BaseScreen">
+
+	<children>
+
+        <AvenirBlackLabel
+            id="title"
+            size="50" />
+
+        <Group 
+            id="container"
+            translation="[100, 200]">
+
+            <Label
+                id="enterZip"
+                font="font:SmallSystemFont" />
+
+            <KeyboardCompact 
+                id="keyboardNumbers"
+                translation="[0, 40]" />
+        </Group>
+
+        <LabelList
+            id="results"
+            numRows="5"
+            itemSize="[600, 75]"
+            itemSpacing="[20, 20]"
+            vertFocusAnimationStyle="floatingFocus"
+            visible="false" />
+
+        <ButtonsStandard
+            id="buttons"
+            rowHeights="[75]"
+            translation="[100, 400]"
+            visible="false" />
+
+        <Notification
+            id="notification"
+            visible="false" />
+    </children>
+
+    <script type="text/brightscript" uri="weather.brs" />
+    <script type="text/brightscript" uri="pkg:/source/api/weather.brs" />
+    <script type="text/brightscript" uri="pkg:/source/reg/weather.brs" />
+    <script type="text/brightscript" uri="pkg:/source/utils/weather.brs" />
+</component>

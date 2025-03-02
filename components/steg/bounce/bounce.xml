@@ -1,0 +1,32 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<component name="Bounce" extends="Rectangle">
+
+    <!-- 
+        To start the bounce append the node as a child to this component
+    -->
+
+    <interface>
+        <field id="duration" type="integer" alias="animation.duration" value="5" />
+
+        <function name="add" />
+    </interface>
+
+    <children>
+
+        <Group
+            id="container" />
+
+        <Animation
+            id="animation"
+            repeat="false"
+            easeFunction="linear">
+            <Vector2DFieldInterpolator
+                id="interp"
+                key="[0.0, 1.0]"
+                fieldToInterp="logo.translation" />
+        </Animation>
+    </children>
+
+    <script type="text/brightscript" uri="bounce.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/math.brs" />
+</component>
