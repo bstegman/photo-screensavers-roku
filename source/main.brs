@@ -9,10 +9,10 @@ End Sub
 '-------------------------------------------------------------------------------
 ' RunScreenSaver
 '-------------------------------------------------------------------------------
-Sub RunScreenSaver(externalParams as object)
+' Sub RunScreenSaver(externalParams as object)
 
-    InitApp()
-End Sub
+'     InitApp()
+' End Sub
 
 '-------------------------------------------------------------------------------
 ' InitApp

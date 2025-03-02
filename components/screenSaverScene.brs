@@ -6,8 +6,8 @@ Sub init()
 	m.top.backgroundUri = ""
 	m.top.backgroundColor = "#000000"
 
-    m.foundPhotos = false
     m.photos = []
+    m.photoIdx = 0
 
 	m.apiRequestManager = m.top.findNode("ApiRequestManager")
 	m.apiRequestManager.control = "RUN"
@@ -19,23 +19,6 @@ Sub init()
     m.photoTimer.ObserveFieldScoped("fire", "onPhotoTimerFire")
 
     API_Collections_GetS3PhotosForIds(callbackGetPhotos, Device_GetManifestValue("collectionId"))
-End Sub
-
-'-------------------------------------------------------------------------------
-' callbackGetPhotos
-'-------------------------------------------------------------------------------
-Sub callbackGetPhotos(response as Object)
-
-    if API_Utils_Response_isSuccess(response)
-
-        if response.data.results.Count() <> 0
-
-            m.photos = response.data.results
-            Track_Init("increment", m.photos.Count())
-
-            showPhoto()
-        end if
-    end if
 End Sub
 
 '-------------------------------------------------------------------------------
@@ -59,19 +42,42 @@ Sub onPhotoLoadStatusChange(evt as object)
 End Sub
 
 '-------------------------------------------------------------------------------
+' callbackGetPhotos
+'-------------------------------------------------------------------------------
+Sub callbackGetPhotos(response as Object)
+
+    if API_Utils_Response_isSuccess(response)
+
+        if response.data.results.Count() > 0
+
+            ' FOR DEV
+            ' p = [
+            '     response.data.results[0],
+            '     response.data.results[1],
+            '     response.data.results[2]
+            ' ]
+            ' m.photos = p
+
+            m.photos = response.data.results
+
+            showPhoto()
+        end if
+    end if
+End Sub
+
+'-------------------------------------------------------------------------------
 ' showPhoto
 '-------------------------------------------------------------------------------
 Sub showPhoto()
 
-    idx = Track_GetNextIdx()
-    print "idx: ";idx
+    photo = m.photos[m.photoIdx]
+    if m.photoIdx + 1 < m.photos.Count()
 
-    photo = m.photos[idx]
-    if m.viewPhoto.photoURL = photo.url
-
-        showPhoto()
+        m.photoIdx++
     else
 
-        m.viewPhoto.photoURL = photo.url
+        m.photoIdx = 0
     end if
+
+    m.viewPhoto.photoURL = photo.url
 End Sub
