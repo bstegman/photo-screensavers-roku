@@ -8,18 +8,8 @@
             photoScale="tv"
             transition="fade" />
 
-        <Group
-            id="container"
-            visible="false">
-
-            <Label
-                id="title"
-                width="1700"
-                wrap="true"
-                font="font:LargeBoldSystemFont" />
-        </Group>
-
-        <ApiRequestManager id="ApiRequestManager" />
+        <ApiRequestManager 
+            id="ApiRequestManager" />
 
 		<Timer
 			id="photoTimer"
@@ -28,11 +18,14 @@
 	</children>
 
     <script type="text/brightscript" uri="screenSaverScene.brs" />
+    <script type="text/brightscript" uri="pkg:/source/api/collections.brs" />
     <script type="text/brightscript" uri="pkg:/source/steg/api/newRelic.brs" />
     <script type="text/brightscript" uri="pkg:/source/steg/api/utils.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/device.brs" />
     <script type="text/brightscript" uri="pkg:/source/steg/locale.brs" />
     <script type="text/brightscript" uri="pkg:/source/steg/math.brs" />
     <script type="text/brightscript" uri="pkg:/source/steg/track.brs" />
     <script type="text/brightscript" uri="pkg:/source/steg/type.brs" />
     <script type="text/brightscript" uri="pkg:/source/steg/ui.brs" />
+    <script type="text/brightscript" uri="pkg:/source/utils/api.brs" />
 </component>

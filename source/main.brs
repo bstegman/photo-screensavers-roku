@@ -19,6 +19,8 @@ End Sub
 '-------------------------------------------------------------------------------
 Sub InitApp()
 
+	deviceInfo = CreateObject("roDeviceInfo")
+
     port = CreateObject("roMessagePort")
 
 	screen = CreateObject("roSGScreen")
@@ -28,16 +30,12 @@ Sub InitApp()
 
 	m.global = screen.getGlobalNode()
 
-    strings = ParseJson(ReadAsciiFile("pkg:/locale/strings.json"))
-
+	environments = ParseJson(ReadAsciiFile("pkg:/configs/environments.json"))
 	environment = {
-        "newRelic":{
-            "enabled":true,
-            "accountID":"2823845",
-            "apiKey":"NRII-zRRMsoBQfC8ZfCbCVNKbaAfuTKm5_Id8"
-        }
+		deviceLang:LCase(Left(deviceInfo.getCurrentLocale(), 2)),
+		environment:environments[environments.current]
 	}
-	m.global.AddFields({strings:strings, environment:environment})
+	m.global.AddFields(environment)
 
 	screen.show()
 
