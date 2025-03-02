@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<component name="KeepAliveNode" extends="ContentNode">
-
-	<interface>
-		<field id="url" type="string" value="pkg:/components/steg/keepAlive/keepAlive.mp4" />
-		<field id="streamformat" type="string" value="mp4" />
-	</interface>
-</component>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<component name="LabelGrid" extends="MarkupGrid" >
-
-	<script type="text/brightscript" uri="labelGrid.brs" />
-</component>
