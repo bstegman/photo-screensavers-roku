@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ScreenSaverScene" extends="Scene">
+
+	<children>
+
+        <ViewPhoto
+            id="viewPhoto"
+            photoScale="tv"
+            transition="fade" />
+
+        <Group
+            id="container"
+            visible="false">
+
+            <Label
+                id="title"
+                width="1700"
+                wrap="true"
+                font="font:LargeBoldSystemFont" />
+        </Group>
+
+        <ApiRequestManager id="ApiRequestManager" />
+
+		<Timer
+			id="photoTimer"
+			duration="30"
+			repeat="false" />
+	</children>
+
+    <script type="text/brightscript" uri="screenSaverScene.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/api/newRelic.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/api/utils.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/locale.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/math.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/track.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/type.brs" />
+    <script type="text/brightscript" uri="pkg:/source/steg/ui.brs" />
+</component>
